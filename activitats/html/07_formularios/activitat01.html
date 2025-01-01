@@ -12,27 +12,21 @@
 
             <legend><h2>Formulari de contacte</h2></legend>
 
-            <label>
-                Nom i cognoms
-                <input type="text" name="nomSencer">
-            </label>
-
-            <br><br>
-
-            <label>
-                Correu electrònic
-                <input type="email" name="correuElectronic">
-            </label>
-
-            <br><br>
-
-            <label>
-                Missatge
-                <textarea name="missatge"></textarea>
-            </label>
-
-            <br><br>
+            <label for="idNom">Nom i cognoms</label>
+            <input id="idNom" type="text" name="nomSencer" required>
             
+            <br><br>
+
+            <label for="idCorreu">Correu electrònic</label>
+            <input id="idCorreu" type="email" name="correuElectronic" required>
+
+            <br><br>
+
+            <label for="idMissatge">Missatge</label>
+            <textarea id="idMissatge" name="missatge"></textarea>
+
+            <br><br>
+
             <button type="submit">
                 Enviar
             </button>
