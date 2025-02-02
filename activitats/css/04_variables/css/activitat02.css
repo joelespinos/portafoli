@@ -1,0 +1,6 @@
+p {
+    --altura: 200px;
+    height: var(--altura);
+    width: calc(var(--altura) * 2);
+    background-color: rgb(42, 193, 65);
+}
