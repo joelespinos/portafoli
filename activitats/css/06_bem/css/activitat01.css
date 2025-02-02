@@ -1,0 +1,43 @@
+header {
+    display: flex;
+    align-items: center;
+    background-color: rgb(2, 144, 2);
+}
+
+.logo {
+    width: 120px;
+    .logo__imatge {
+        width: 100%;
+    }
+}
+
+.navegador {
+    padding-left: 410px;
+
+    .navegador__link {
+        color: white;
+        text-decoration: none;
+        padding-right: 20px;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+
+.buscador {
+    padding-left: 200px;
+
+    .buscador__input {
+        padding: 7px;
+        width: 200px;
+        border: 1px white;
+        border-radius: 10px;
+    }
+
+    .buscador__button {
+        padding: 7px;
+        background-color: white;
+        border: 1px white;
+        border-radius: 50px;
+    }
+
+}
