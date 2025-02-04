@@ -1,0 +1,101 @@
+:root {
+    --vermell: rgb(238, 0, 0);
+    --gris-fluix: rgb(215, 215, 215);
+    --gris-fort: rgb(165, 165, 165);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titol {
+    font-size: 20px;
+    padding-left: 30px;
+    color: var(--vermell);
+    border-top: 4px solid var(--gris-fluix);
+    border-bottom: 1px solid var(--gris-fluix);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.negreta {
+    font-weight: bold;
+}
+
+.subtitol {
+    font-size: 20px;
+    margin-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    color: gray;
+}
+
+.nom {
+    background-color: var(--vermell);
+    color: white;
+    padding: 5px;
+}
+
+.vermell {
+    color: var(--vermell);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+main {
+    background-color: rgb(248, 248, 248);
+}
+
+.contingut {
+    padding: 20px;
+}
+
+.writing {
+    font-size: 25px;
+    color: gray;
+}
+
+.textDalt {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gris-fluix);
+}
+
+.text {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gris-fluix);
+}
+
+.textBaix {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.data {
+    font-style: italic;
+    color: var(--gris-fort);
+}
+
+.marcat {
+    color: var(--vermell);
+    font-weight: bold;
+    border-bottom: 3px solid var(--gris-fluix);
+}
+
+.readMore {
+    font-style: italic;
+    color: var(--vermell);
+    border-bottom: 3px solid var(--gris-fluix);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+footer {
+    padding: 20px;
+    font-size: 13px;
+    color: var(--gris-fort);
+}
