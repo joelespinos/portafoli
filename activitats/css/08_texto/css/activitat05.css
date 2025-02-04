@@ -1,0 +1,12 @@
+.negreta {
+    font-weight: bold;
+}
+
+.majuscules {
+    text-transform: uppercase;
+}
+
+.marcat {
+    font-style: italic;
+    background-color: yellow;
+}
