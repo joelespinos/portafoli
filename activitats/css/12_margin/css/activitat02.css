@@ -1,0 +1,42 @@
+body {
+    margin-inline: 28%;
+}
+
+.introduccio {
+    margin-top: 3.5rem;
+    background-color: #DDE8E6;
+    font-size: 1.3rem;
+    font-family: 'Segoe UI';
+    text-align: center;
+    line-height: 2.1rem;
+}
+
+.subratllat {
+    text-decoration: underline;
+}
+
+.titol {
+    margin-top: 5rem;
+    font-size: 2rem;
+}
+
+.text {
+    width: 60%;
+    font-family: 'Segoe UI';
+    line-height: 1.5rem;
+}
+
+.button {
+    margin-top: 3rem;
+    width: 25%;
+    text-align: center;
+    font-family: 'Segoe UI';
+    font-size: 1rem;
+    border: 2px solid black;
+    border-radius: 50px;
+
+    &:hover {
+        background-color: rgb(214, 214, 214);
+        cursor: pointer;
+    }
+}
