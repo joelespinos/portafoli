@@ -1,0 +1,13 @@
+.imatge {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+img {
+    width: 200px;
+    padding: 1rem;
+    align-items: center;
+    border: 10px solid red;
+    border-radius: 15%;
+}
