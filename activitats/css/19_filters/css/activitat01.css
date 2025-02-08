@@ -1,0 +1,16 @@
+.imatge {
+    display: flex;
+    justify-content: center;
+    margin-top: 6%;
+}
+
+.imatge img {
+    width: 500px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+
+    &:hover {
+        filter: grayscale(100%);
+    }
+}
