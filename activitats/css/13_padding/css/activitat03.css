@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Moranga';
+    src: url(../fonts/Latinotype\ -\ Moranga\ Light.otf) format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+.container {
+    margin-inline: 20%;
+    border: 2px solid black;
+}
+
+.title {
+    margin: 0;
+    padding-left: 35px;
+    padding-block: 30px;
+    font-family: 'Moranga';
+    font-size: 1.5rem;
+    border-top: 2px solid black;
+}
+
+.titleNoLine {
+    margin: 0;
+    padding-left: 35px;
+    padding-block: 20px;
+    font-family: 'Moranga';
+    font-size: 1.5rem;
+}
+
+.text {
+    padding-left: 35px;
+    font-family: 'Segoe UI';
+    margin-right: 45%;
+    margin-bottom: 5%;
+}
