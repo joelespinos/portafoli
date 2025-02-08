@@ -1,0 +1,62 @@
+:root {
+    --marro: #8B5B29;
+    --marro-clar: #C2B280;
+}
+
+@font-face {
+    font-family: 'Aesthetic';
+    src: url('../fonts/Aesthetic\ Beauty\ CF.otf') format(opentype);
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    
+    background-color: #D9CBAE;
+}
+
+.title {
+    text-align: center;
+    background-color: var(--marro);
+    color: var(--marro-clar);
+    font-family: 'Aesthetic';
+    font-size: 1.6rem;
+    padding: 0.5rem;
+}
+
+.container {
+    display: flex;
+    margin-inline: 5%;
+    margin-top: 5%;
+}
+
+.arquitecture {
+    margin-inline: 2%;
+}
+
+.arquitecture_title {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Aesthetic';
+    background-color: var(--marro);
+    color: var(--marro-clar);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 15px;
+    padding-bottom: 10px;
+}
+
+.arquitecture_info {
+    text-align: justify;
+    padding-inline: 25px;
+    padding-bottom: 10px;
+    max-height: 10rem;
+    overflow: scroll;
+    overflow-x: hidden;
+    font-family: 'Segoe UI';
+    border: 3px solid var(--marro);
+    background-color: white;
+}
