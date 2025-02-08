@@ -1,0 +1,18 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    margin-top: 10rem;
+    list-style-image: url(../img/batman.png);
+}
+
+li {
+    align-items: center;
+    font-family: 'Segoe UI';
+    font-size: 1.5rem;
+    font-weight: bold;
+    align-items: center;
+    line-height: 3.5rem;
+}
