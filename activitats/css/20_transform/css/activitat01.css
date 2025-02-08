@@ -1,0 +1,21 @@
+.boto {
+    display: flex;
+    justify-content: center;
+    margin-top: 17%;
+}
+
+.boto button {
+    padding-inline: 7rem;
+    padding-block: 3rem;
+    font-size: 3rem;
+    font-family: 'Segoe UI';
+    background-color: greenyellow;
+    border: 5px solid darkgreen;
+    border-radius: 100px;
+
+    &:hover {
+        background-color: rgb(148, 223, 35);
+        transform: rotate(15deg);
+        cursor: pointer;
+    }
+}
