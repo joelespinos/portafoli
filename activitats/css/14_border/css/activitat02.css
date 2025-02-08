@@ -1,0 +1,13 @@
+.imatge {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+img {
+    width: 200px;
+    align-items: center;
+    border: 10px solid orange;
+    border-left-style: dashed;
+    border-right-style: dashed;
+}
