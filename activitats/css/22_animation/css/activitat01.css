@@ -1,0 +1,59 @@
+@keyframes move-moon {
+    
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translate(-800px);
+    }
+}
+
+@keyframes dark-sky {
+    
+    0% {
+        background-color: aqua;
+    }
+
+    60% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: aqua;
+    }
+}
+
+body {
+    background-color: aqua;
+    animation-name: dark-sky;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+    margin-left: 28%;
+}
+
+.sun {
+    width: 200px;
+    height: 200px;
+    background-color: gold;
+    border-radius: 50%;
+    margin-right: 20%;
+}
+
+.moon {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(178, 178, 178);
+    border-radius: 50%;
+
+    animation-name: move-moon;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}

@@ -1,0 +1,4 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <line x1="100" y1="50" x2="100" y2="200" stroke="gold" stroke-width="5" />
+  <circle cx="100" cy="200" r="20" fill="gold" />
+</svg>
