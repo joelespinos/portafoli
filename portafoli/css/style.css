@@ -1,0 +1,81 @@
+:root {
+    --background-black: #222222;
+    --white: #FFFFFF;
+    --orange: #FD4C2A;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(../fonts/Inter-VariableFont_opsz\,wght.ttf) format(truetype);
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-black);
+    font-family: 'Inter';
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+    color: var(--white);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-inline: 20px;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+nav li a {
+    display: inline-block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px;
+    transform: translateY(0px);
+    transition: transform 1s;
+}
+
+nav li a:hover {
+    color: var(--orange);
+    background-color: rgb(52, 52, 52);
+    border-radius: 15px;
+    cursor: pointer;
+    animation: selected 0.1s linear forwards;
+    transform: translateY(-7px);
+    transition: 0.25s;
+}
+
+
+.logo {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.right {
+    margin-right: 50px;
+}
+
+.left a {
+    margin-left: 50px;
+    text-decoration: none;
+    color: var(--orange);
+}
