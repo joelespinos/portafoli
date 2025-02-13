@@ -1,7 +1,9 @@
 :root {
     --background-black: #222222;
+    --light-black: rgb(52, 52, 52);
     --white: #FFFFFF;
     --orange: #FD4C2A;
+    --light-gray: #D7D2D0;
 }
 
 @font-face {
@@ -9,6 +11,18 @@
     src: url(../fonts/Inter-VariableFont_opsz\,wght.ttf) format(truetype);
     font-style: normal;
     font-display: swap;
+}
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 
 body {
@@ -55,7 +69,7 @@ nav li a {
 
 nav li a:hover {
     color: var(--orange);
-    background-color: rgb(52, 52, 52);
+    background-color: var(--light-black);
     border-radius: 15px;
     cursor: pointer;
     animation: selected 0.1s linear forwards;
@@ -68,6 +82,13 @@ nav li a:hover {
     color: var(--orange);
     font-weight: bold;
     font-size: 1.1rem;
+    letter-spacing: 0px;
+    transition: letter-spacing 0.5s;
+}
+
+.logo:hover {
+    letter-spacing: 6px;
+    transition: 0.5s;
 }
 
 .right {
@@ -78,4 +99,108 @@ nav li a:hover {
     margin-left: 50px;
     text-decoration: none;
     color: var(--orange);
+}
+
+.container {
+    display: flex;
+    margin-left: 5%;
+    margin-top: 2rem;
+}
+
+.content {
+    font-family: 'Inter';
+    width: 720px;
+}
+
+.hello {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+}
+
+.im {
+    font-size: 2.5rem;
+    margin-left: 20px;
+}
+
+.name {
+    font-size: 4.5rem;
+    margin-block: 0;
+    color: var(--orange);
+}
+
+.mark {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.markc {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 1.35rem;
+}
+
+.text {
+    display: block;
+    font-family: monospace;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    border-right: 3px solid;
+    width: 35ch;
+ 
+    animation: type 3s steps(35), blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+.introduction {
+    font-size: 1.25rem;
+    font-family: monospace;
+    margin-top: 3rem;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    width: 350px;
+    margin-left: 12%;
+}
+
+.image img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-block: 10px;
+    background-color: var(--light-gray);
+}
+
+.copyright {
+    margin-left: 30px;
+    font-family: 'Inter';
+    font-size: 0.9rem;
+}
+
+.social-media {
+    display: flex;
+    margin-right: 50px;
+    gap: 25px;
+}
+
+.social-media img {
+    width: 40px;
+    transform: translateY(0px);
+    transition: transform 0.5s;
+}
+
+.social-media img:hover {
+    transform: translateY(-5px);
+    transition: 0.5s;
 }
