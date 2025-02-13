@@ -27,6 +27,9 @@
 
 body {
     margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .menu {
@@ -92,24 +95,26 @@ nav li a:hover {
 }
 
 .right {
-    margin-right: 50px;
+    margin-right: 2rem;
 }
 
 .left a {
-    margin-left: 50px;
+    margin-left: 2rem;
     text-decoration: none;
     color: var(--orange);
 }
 
 .container {
     display: flex;
+    flex: 1;
     margin-left: 5%;
     margin-top: 2rem;
 }
 
 .content {
     font-family: 'Inter';
-    width: 720px;
+    width: 100%;
+    max-width: 720px;
 }
 
 .hello {
@@ -160,8 +165,10 @@ nav li a:hover {
 .image {
     display: flex;
     align-items: center;
-    width: 350px;
-    margin-left: 12%;
+    width: 100%;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .image img {
@@ -175,27 +182,26 @@ nav li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    bottom: 0;
     width: 100%;
     padding-block: 10px;
     background-color: var(--light-gray);
 }
 
 .copyright {
-    margin-left: 30px;
+    margin-left: 2rem;
     font-family: 'Inter';
     font-size: 0.9rem;
 }
 
 .social-media {
     display: flex;
-    margin-right: 50px;
+    margin-right: 3rem;
     gap: 25px;
 }
 
 .social-media img {
-    width: 40px;
+    width: 100%;
+    max-width: 40px;
     transform: translateY(0px);
     transition: transform 0.5s;
 }
