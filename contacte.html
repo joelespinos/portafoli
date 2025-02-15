@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./portafoli/css/style_contacte.css">
     <title>Portafolis Joel Espinós | Contacte</title>
 </head>
 <body>
-    <h1>Aqui anira el formulari de contacte</h1>
+
+    <header class="menu">
+        <div class="logo left">
+            <h1><a href="./index.html">&lt;/&gt;</a></h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="./index.html">INICI</a></li>
+                <li><a href="./aboutme.html">SOBRE MI</a></li>
+                <li><a href="./activitats/activitats.html">ACTIVITATS</a></li>
+                <li><a href="./contacte.html">CONTACTE</a></li>
+                <li><a href="./wireframe.html">WIREFRAME</a></li>
+            </ul>
+        </nav>
+
+        <div class="logo right">
+            <h1>{ }</h1>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div class="information">
+            <h1>Contacta'm</h1>
+
+            <p>Si t'agradaria parlar-me, contacta amb mi per correu electrònic, per telèfon o amb aquest meravellós formulari de contacte.</p>
+
+            <br>
+
+            <span class="markc">
+                <p><img src="./portafoli/img/phone_icon.png" alt="Icona de Telèfon"> +34 633 69 77 44</p>
+                <p><img src="./portafoli/img/email_icon.png" alt="Icona de Correu"> jespinos@inscaparrella.cat</p>
+                <p><img src="./portafoli/img/house_icon.png" alt="Icona de Casa"> Lleida, Espanya</p>
+            </span>
+            
+        </div>
+
+        <div class="contact">
+
+            <form action="mailto:jespinos@inscaparrella.cat" method="post" enctype="text/plain">
+
+                <input type="text" name="nom" placeholder="Nom i Cognoms..." required><br>
+
+                <input type="email" name="mail" placeholder="Correu electrònic..." required><br>
+
+                <textarea name="message" placeholder="Escriu-me un missatge..."></textarea><br>
+
+                <button type="submit">Enviar Missatge!</button>
+
+            </form>
+
+        </div>
+    </main>
+
+    <footer class="foot">
+        <p class="copyright"><span class="markc">&copy;</span> 2025 <span class="mark">Joel Espinós Ruiz</span>. Tots els drets reservats</p>
+        
+        <div class="social-media">
+            <a href="https://github.com/joelespinos" target="_blank"><img src="./portafoli/img/github_logo.png" alt="Github Logo"></a>
+            <a href="https://www.linkedin.com/in/joel-espin%C3%B3s-ruiz-5316ba2a4/" target="_blank"><img src="./portafoli/img/linkedin_logo.png" alt="Linkedin Logo"></a>
+            <a href="https://www.instagram.com/joel._.espinos/" target="_blank"><img src="./portafoli/img/instagram_logo.png" alt="Instagram Logo"></a>
+        </div>
+    </footer>
 </body>
 </html>
