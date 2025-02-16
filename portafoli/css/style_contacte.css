@@ -11,12 +11,12 @@
 
 .information h1 {
     font-family: 'Inter';
-    font-size: 2.3rem;
+    font-size: var(--title-size);
 }
 
 .information p {
     font-family: monospace;
-    font-size: 1.25rem;
+    font-size: var(--text-size);
 }
 
 .information img {

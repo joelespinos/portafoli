@@ -19,13 +19,13 @@
 
 .info h1 {
     font-family: 'Inter';
-    font-size: 2.3rem;
+    font-size: var(--title-size);
     margin-bottom: 0;
 }
 
 .info p {
     font-family: monospace;
-    font-size: 1.25rem;
+    font-size: var(--text-size);
 }
 
 .activities {
