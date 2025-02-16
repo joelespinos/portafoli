@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    margin-left: 5%;
+    margin-top: 2rem;
+}
+
+.content {
+    font-family: 'Inter';
+    width: 100%;
+    max-width: 720px;
+}
+
+.hello {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+}
+
+.im {
+    font-size: 2.5rem;
+    margin-left: 20px;
+}
+
+.name {
+    font-size: 4.5rem;
+    margin-block: 0;
+    color: var(--orange);
+}
+
+.text {
+    display: block;
+    font-family: monospace;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    border-right: 3px solid;
+    width: 35ch;
+    animation: type 3s steps(35), blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+.introduction {
+    font-size: 1.25rem;
+    font-family: monospace;
+    margin-top: 3rem;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+
+.image img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
