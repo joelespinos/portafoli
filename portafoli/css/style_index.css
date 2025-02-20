@@ -32,7 +32,7 @@
     font-size: 1.5rem;
     white-space: nowrap;
     border-right: 3px solid;
-    width: 35ch;
+    width: 36ch;
     animation: type 3s steps(35), blink .5s infinite step-end alternate;
     overflow: hidden;
 }
