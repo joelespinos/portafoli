@@ -79,7 +79,7 @@ h1 {
     text-align: center;
 }
 
-.language-images {
+.language-blocks {
     display: flex;
     justify-content: center;
     gap: 5%;
@@ -88,32 +88,28 @@ h1 {
 .language-block {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 100px;
-    max-height: 100px;
-}
-
-.language-block p {
-    margin-left: 0.5rem;
 }
 
 .language-logo {
-    width: 75px;
-    height: 75px;
+    width: 100px;
+    height: 100px;
     background-color: var(--light-black);
-    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 10%;
     transform: scale(1);
     transition: transform 0.4s, border-radius 0.4s, background-color 0.4s;
 }
 
-.language-logo img{
-    width: 75px;
-    height: 75px;
+.language-logo img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
 }
 
 .language-logo:hover {
-    transform: scale(1.15);
+    transform: scale(1.10);
     border-radius: 50%;
     background-color: var(--light-gray2);
     transition: 0.2s;
@@ -122,7 +118,7 @@ h1 {
 .studies {
     display: flex;
     flex-direction: column;
-    margin-block: 3rem;
+    margin-block: 1rem 3rem;
     align-items: center;
     font-family: 'Inter';
 }
