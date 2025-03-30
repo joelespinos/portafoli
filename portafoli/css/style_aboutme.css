@@ -20,34 +20,11 @@
 }
 
 .image img {
-    max-width: 55%;
+    width: 320px;
+    height: 320px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 50%;
-}
-
-.cv {
-    margin-top: 5%;
-    padding-block: 1rem;
-    padding-inline: 4rem;
-    border: 0.15rem solid var(--background-black);
-    border-radius: 50px;
-    text-decoration: none;
-    font-family: 'Inter';
-    font-size: 1.2rem;
-    font-weight: bold;
-    background-color: var(--background-black);
-    color: var(--orange);
-    transform: translateY(0px);
-    transition: 0.5s;
-}
-
-.cv:hover {
-    background-color: var(--orange);
-    color: var(--background-black);
-    border-color: var(--orange);
-    transform: translateY(-0.5rem);
-    transition: 0.5s;
 }
 
 h1 {
@@ -68,7 +45,6 @@ h1 {
 .presentation p {
     font-family: monospace;
     font-size: var(--text-size);
-    text-align: justify;
 }
 
 .languages {
@@ -118,7 +94,7 @@ h1 {
 .studies {
     display: flex;
     flex-direction: column;
-    margin-block: 1rem 3rem;
+    margin-bottom: 3rem;
     align-items: center;
     font-family: 'Inter';
 }
