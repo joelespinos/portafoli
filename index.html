@@ -1,66 +1,230 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./portafoli/css/style_general.css">
-    <link rel="stylesheet" type="text/css" href="./portafoli/css/style_index.css">
-    <link rel="icon" type="image/png" href="./portafoli/img/favicon.png">
-    <title>Inici | Portafolis Joel Espinós</title>
+    <link rel="preload" href="./fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="shortcut icon" href="./assets/code-favicon.png" type="image/png">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script type="text/javascript" src="./scripts/darkmode.js" defer></script>
+    <script type="text/javascript" src="./scripts/copy.js" defer></script>
+    <title>Porfolio de Joel Espinós</title>
+    <meta name="description" content="Porfolio personal de Joel Espinós Ruiz. Aquí encontrarás mis proyectos de desarrollo web, habilidades en HTML, CSS, y más.">
+    <meta name="keywords" content="portafolio, desarrollo web, HTML, CSS, proyectos, frontend, backend, programador, Joel Espinós Ruiz">
+    <meta name="author" content="Joel Espinós Ruiz">
 </head>
 <body>
 
-    <header class="menu">
-        <div class="logo left">
-            <h1><a href="./index.html">&lt;/&gt;</a></h1>
-        </div>
+    <div class="container">
+        <header class="header">
+            <nav class="navegation">
+                <ul class="navegation__list">
+                    <li class="navegation__item"><a href="#experience">Experiencia</a></li>
+                    <li class="navegation__item"><a href="#projects">Proyectos</a></li>
+                    <li class="navegation__item"><a href="#stack">Tecnologías</a></li>
+                    <li class="navegation__item"><a href="#about-me">Sobre mí</a></li>
+                    <button id="theme-switch">
+                        <!-- Moon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1.75em" height="1.75em" style="vertical-align: middle; overflow: hidden;"><path d="M524.490551 1023.43355c-140.102939 0-271.81403-54.547017-370.878782-153.611769S0 639.045939 0 498.943c0-115.183242 36.995772-223.867918 106.944903-314.336142a523.825343 523.825343 0 0 1 119.276826-112.266563A533.035909 533.035909 0 0 1 376.55863 1.11192a25.584905 25.584905 0 0 1 30.036679 36.228225c-33.004527 64.320451-48.35547 125.621883-48.355471 193.012523 0 239.832899 195.110485 434.943383 434.943384 434.943383 67.39064 0 128.692072-15.350943 193.012523-48.35547a25.584905 25.584905 0 0 1 36.228225 30.036678 534.468663 534.468663 0 0 1-71.228375 150.336902 523.825343 523.825343 0 0 1-112.266563 119.276826 509.395457 509.395457 0 0 1-314.336142 106.944903zM336.18565 69.884144C163.538712 143.82452 51.16981 309.819383 51.16981 498.943 51.16981 759.90903 263.524521 972.26374 524.490551 972.26374c189.123617 0 355.11848-112.420072 429.058855-285.01584A451.98293 451.98293 0 0 1 793.132052 716.414691c-129.868977 0-251.908974-50.555772-343.707612-142.354411S307.018859 360.170475 307.018859 230.301498c0-55.109885 9.619924-108.019469 29.166791-160.417354z" fill="currentColor"/></svg>
+                        <!-- Sun -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="1.75em" height="1.75em"><g transform="translate(1.4066 1.4066) scale(2.81 2.81)" fill="currentColor"><path d="M45 68c-12.682 0-23-10.317-23-23 0-12.682 10.318-23 23-23 12.683 0 23 10.318 23 23 0 12.683-10.317 23-23 23zM45 28c-9.374 0-17 7.626-17 17s7.626 17 17 17 17-7.626 17-17-7.626-17-17-17z"/><path d="M45 17.556c-1.657 0-3-1.343-3-3V3c0-1.657 1.343-3 3-3s3 1.343 3 3v11.556c0 1.656-1.343 3-3 3z"/><path d="M45 90c-1.657 0-3-1.343-3-3V75.444c0-1.657 1.343-3 3-3s3 1.343 3 3V87c0 1.657-1.343 3-3 3z"/><path d="M14.556 48H3c-1.657 0-3-1.343-3-3s1.343-3 3-3h11.556c1.657 0 3 1.343 3 3s-1.344 3-3 3z"/><path d="M87 48H75.444c-1.657 0-3-1.343-3-3s1.343-3 3-3H87c1.657 0 3 1.343 3 3s-1.343 3-3 3z"/><path d="M66.527 26.473c-.768 0-1.535-.293-2.121-.878-1.172-1.172-1.172-3.071 0-4.243l8.171-8.171c1.172-1.172 3.07-1.171 4.242 0s1.172 3.071 0 4.243l-8.171 8.171c-.586.585-1.354.878-2.121.878z"/><path d="M15.302 77.698c-.768 0-1.536-.293-2.121-.879-1.172-1.171-1.172-3.071 0-4.242l8.171-8.171c1.171-1.172 3.071-1.172 4.242 0s1.172 3.071 0 4.242l-8.171 8.171c-.585.586-1.353.879-2.121.879z"/><path d="M23.473 26.473c-.768 0-1.536-.293-2.121-.878l-8.171-8.171c-1.172-1.172-1.172-3.071 0-4.243s3.072-1.171 4.243 0l8.171 8.171c1.172 1.172 1.172 3.071 0 4.243-.586.585-1.354.878-2.122.878z"/><path d="M74.698 77.698c-.768 0-1.535-.293-2.121-.879l-8.171-8.171c-1.172-1.171-1.172-3.071 0-4.242s3.07-1.172 4.242 0l8.171 8.171c1.172 1.171 1.172 3.071 0 4.242-.586.586-1.354.879-2.121.879z"/></g></svg>
+                    </button>
+                </ul>
+            </nav>
+        </header>
 
-        <nav>
-            <ul>
-                <li><a href="./index.html">INICI</a></li>
-                <li><a href="./aboutme.html">SOBRE MI</a></li>
-                <li><a href="./activitats/activitats.html">ACTIVITATS</a></li>
-                <li><a href="./contacte.html">CONTACTE</a></li>
-                <li><a href="./wireframe.html">WIREFRAMES</a></li>
-            </ul>
-        </nav>
+        <main>
+            <section class="introduction">
+                <img class="introduction__avatar" src="./images/joel-icon.png" alt="Avatar de Joel Espinós Ruiz">
 
-        <div class="logo right">
-            <h1>{ }</h1>
-        </div>
-    </header>
+                <div class="introduction__information">
+                    <h1 class="introduction__title">Hello world ! <br> soy <span class="primary-mark">Joel Espinós Ruiz</span></h1>
+                    <p class="introduction__subtitle">En camino de ser un <span class="secondary-mark">Desarrollador Web</span></p>
+                    <p class="introduction__text">Estudiante de <span class="primary-mark">DAW</span>, en constante aprendizaje y con gran entusiasmo por el mundo del desarrollo de software</p>
+                    
+                    <div class="introduction__buttons">
+                        <button class="link-button" onclick="window.open('https:\/\/github.com/joelespinos', '_blank')">
+                            <svg style="width: 1.5em;height: 1.6em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" d="M692.906667 938.666667a42.666667 42.666667 0 0 1-42.666667-42.666667v-110.933333a91.733333 91.733333 0 0 0-23.04-70.826667 42.666667 42.666667 0 0 1 26.026667-71.253333C757.333333 630.613333 853.333333 597.333333 853.333333 416.853333a170.666667 170.666667 0 0 0-28.586666-94.72 117.333333 117.333333 0 0 1-17.493334-87.893333 158.293333 158.293333 0 0 0 0-60.16 326.4 326.4 0 0 0-89.173333 46.506667 42.666667 42.666667 0 0 1-35.84 6.4 433.066667 433.066667 0 0 0-235.52 0 42.666667 42.666667 0 0 1-35.84-6.4 315.733333 315.733333 0 0 0-90.026667-46.506667 150.186667 150.186667 0 0 0 0 60.16 121.173333 121.173333 0 0 1-18.346666 88.746667 173.653333 173.653333 0 0 0-28.586667 95.146666c0 165.973333 80.213333 210.346667 200.533333 225.706667a42.666667 42.666667 0 0 1 34.986667 28.16 42.666667 42.666667 0 0 1-8.96 42.666667 87.893333 87.893333 0 0 0-23.466667 66.56V896a42.666667 42.666667 0 0 1-85.333333 0v-24.32a256 256 0 0 1-224.853333-89.173333 166.4 166.4 0 0 0-49.493334-37.546667 42.666667 42.666667 0 1 1 21.333334-82.773333 210.346667 210.346667 0 0 1 85.333333 58.026666c42.666667 42.666667 85.333333 80.213333 166.4 64.853334a165.973333 165.973333 0 0 1 9.813333-67.413334c-87.893333-22.186667-213.333333-85.333333-213.333333-298.666666a256 256 0 0 1 42.666667-142.08 36.266667 36.266667 0 0 0 5.546666-26.453334 242.773333 242.773333 0 0 1 14.08-136.96 42.666667 42.666667 0 0 1 26.88-24.32c14.506667-4.266667 66.56-12.8 165.12 51.2a518.826667 518.826667 0 0 1 242.773334 0c98.56-64 150.613333-55.893333 164.693333-51.2a42.666667 42.666667 0 0 1 26.88 24.32 243.626667 243.626667 0 0 1 14.08 137.386667 32 32 0 0 0 4.693333 24.32 256 256 0 0 1 42.666667 142.506667c0 216.32-124.586667 279.04-213.333333 298.666666a182.613333 182.613333 0 0 1 9.386666 71.253334V896a42.666667 42.666667 0 0 1-40.106666 42.666667z"/>
+                            </svg>
+                            GitHub
+                        </button>
+                        
+                        <button class="link-button" onclick="window.open('https:\/\/linkedin.com/in/joelespinosruiz/', 'blank_')">
+                            <svg style="width: 1.6em; height: 1.6em; vertical-align: middle; fill: currentColor; overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M847.7 112H176.3c-35.5 0-64.3 28.8-64.3 64.3v671.4c0 35.5 28.8 64.3 64.3 64.3h671.4c35.5 0 64.3-28.8 64.3-64.3V176.3c0-35.5-28.8-64.3-64.3-64.3z m0 736c-447.8-0.1-671.7-0.2-671.7-0.3 0.1-447.8 0.2-671.7 0.3-671.7 447.8 0.1 671.7 0.2 671.7 0.3-0.1 447.8-0.2 671.7-0.3 671.7z"/>
+                                <path d="M230.6 411.9h118.7v381.8H230.6zM290 359.7c37.9 0 68.8-30.8 68.8-68.8 0-37.9-30.8-68.8-68.8-68.8s-68.8 30.8-68.8 68.8c-0.1 38 30.7 68.8 68.8 68.8zM542.3 604.8c0-49.8 9.5-98 71.2-98 60.8 0 61.7 56.9 61.7 101.2v185.7h118.6V584.3c0-102.8-22.2-181.9-142.3-181.9-57.7 0-96.4 31.7-112.3 61.7h-1.6v-52.2H423.7v381.8h118.6V604.8z"/>
+                            </svg>
+                            Linkedin
+                        </button>
 
-    <main class="container">
-        <div class="content">
-            <div class="first-content">
-                <h1 class="hello">HOLA MÓN! <span class="im">soc el</span></h1>
-                <h1 class="name">Joel Espinós Ruiz</h1>
-                <h2><span class="text">En camí de ser un <span class="mark">Desenvolupador Web</span></span></h2>
-
-                <div class="introduction">
-                    <p><span class="mark">&lt;p&gt;</span> Benvinguts al meu portafolis web!</p>
-                    <p>Soc el <span class="mark">Joel Espinós Ruiz</span>, actualment alumne del primer curs de DAW i futur desenvolupador web, en aquest portafolis coneixeràs les meves habilitats, les meves passions i els meus treballs! <span class="mark">&lt;/p&gt;</span></p>
+                        <button class="link-button" onclick="window.open('./docs/cv_joel_espinos.pdf', 'blank_')">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1.6em" viewBox="0 -960 960 960" width="1.6em" fill="currentcolor"><path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                            CV
+                        </button>
+                    </div>
                 </div>
+            </section>
 
-                <div class="index-buttons">
-                    <a class="cv" href="./portafoli/docs/cv_joel_espinos.pdf" target="_blank">CV</a>
-                    <a class="cv" href="./contacte.html" target="_blank">Contacta'm</a>
+            <!-- ######################################### -->
+
+            <section class="contact-mail">
+                <!-- Email SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px"><path class="text-mark" fill="currentColor" d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v312q-27-16-57.5-24t-62.5-8q-100 0-170 70t-70 170v40H160Zm320-280 320-200v-80L480-520 160-720v80l320 200Z"/><path class="primary-mark" fill="currentColor" d="m760-40-56-56 63-64H600v-80h167l-64-64 57-56 160 160L760-40Z"/></svg>
+                
+                <div class="contact-mail__input">
+                    <input class="contact-mail__input__text" type="text" value="jespinosruiz@gmail.com">
+                    
+                    <div class="contact-mail__input__buttons">
+                        <!-- Send SVG -->
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px"><path d="M120-160v-240l320-80-320-80v-240l760 320-760 320Z"/></svg>
+                        </button> 
+                        
+                        <!-- Copy SVG -->
+                        <button class="copy-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px"><path d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Z"/></svg>
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="image">
-                <img src="./portafoli/img/joel_espinos.jpeg" alt="Joel Espinós Ruiz">
-            </div>
-        </div>
-    </main>
+            </section>
 
-    <footer class="foot">
-        <p class="copyright"><span class="markc">&copy;</span> 2025 <span class="mark">Joel Espinós Ruiz</span>. Tots els drets reservats</p>
+            <!-- ######################################### -->
+
+            <div class="section-subtitle">
+                <svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px" fill="currentColor"><path class="text-mark" d="M160-200v-440 440-15 15Zm0 80q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v132h-80v-132H160v440h283q3 21 9 41t15 39H160Zm240-600h160v-80H400v80Z"/><path class="primary-mark" d="M720-40q-83 0-141.5-58.5T520-240q0-83 58.5-141.5T720-440q83 0 141.5 58.5T920-240q0 83-58.5 141.5T720-40Zm20-208v-112h-40v128l86 86 28-28-74-74Z"/></svg>
+                <h2 id="experience">Experiencia</h2>
+            </div>
+
+            <section class="experience">
+                <ul class="experience__list">
+                    <li class="experience__container">
+                        <div class="experience__head">
+                            <h3 class="large-subtitle primary-mark">Desarrollador Web Trainee</h3>
+                            <h4 class="medium-subtitle secondary-mark">Indra Software Labs - Minsait</h4>
+                            <time class="small-subtitle">Junio 2025 - Actualmente</time>
+                        </div>
+                        <div class="experience_text">
+                            <p>Formación práctica en lógica de servidor y garantía de calidad de software en tecnologías Back-End (Java, MySQL), Testing y metodologías ágiles Scrum.</p>
+                        </div>
+                    </li>
+
+                    <li class="experience__container">
+                        <div class="experience__head">
+                            <h3 class="large-subtitle primary-mark">Técnico informático</h3>
+                            <h4 class="medium-subtitle secondary-mark">IES Caparrella</h4>
+                            <time class="small-subtitle">Junio 2023 - Noviembre 2023</time>
+                        </div>
+                        <div class="experience_text">
+                            <p>Instalación de equipos microinformáticos y cableado de red.</p>
+                            <p>Instalación y clonación de sistemas operativos.</p>
+                            <p>Resolución de incidencias y mantenimiento de equipos microinformáticos.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- ######################################### -->
+
+            <div class="section-subtitle">
+                <svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px" fill="currentColor"><path class="text-mark" d="M160-240v-480 520-40Zm0 80q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v200h-80v-200H447l-80-80H160v480h200v80H160Z"/><path class="primary-mark" d="M584-56 440-200l144-144 56 57-87 87 87 87-56 57Zm192 0-56-57 87-87-87-87 56-57 144 144L776-56Z"/></svg>
+                <h2 id="projects">Proyectos</h2>
+            </div>
+
+            <section class="projects">
+                <article class="project__container">
+                    <div class="project__image">
+                        <img src="./images/reservation_project.png" alt="Proyecto de sistema de reservas de salas">
+                    </div>
+                    <div class="project__information">
+                        <h3 class="largest-subtitle text-mark">Sistema de reservas de salas</h3>
+                        <ul class="languages-list">
+                            <li class="tag java--tag">Java</li>
+                            <li class="tag mysql--tag">MySQL</li>
+                            <li class="tag maven--tag">Maven</li>
+                        </ul>
+                        <p>Aplicación de tipo CRUD completo que permite gestionar un pequeño sistema de reservas para salas de reuniones de una empresa, permite controlar y evitar solapamientos de reservas.</p>
+                        <div class="introduction__buttons">
+                            <button class="link-button" onclick="window.open('https:\/\/github.com/joelespinos/room-reservation-system', '_blank')">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1.6em" viewBox="0 -960 960 960" width="1.5em" fill="currentcolor"><path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/></svg>
+                                Code
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project__container">
+                    <div class="project__image">
+                        <img src="./images/wumpus_project.png" alt="">
+                    </div>
+                    <div class="project__information">
+                        <h3 class="largest-subtitle text-mark">Hunt The Wumpus Game</h3>
+                        <ul class="languages-list">
+                            <li class="tag java--tag">Java</li>
+                        </ul>
+                        <p>Recreación del clásico juego Hunt The Wumpus. El proyecto aplica los principios de la programación orientada a objetos, así como el modelo MVC.</p>
+                        <div class="introduction__buttons">
+                            <button class="link-button" onclick="window.open('https:\/\/github.com/joelespinos/hunt-the-wumpus-game', '_blank')">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1.6em" viewBox="0 -960 960 960" width="1.5em" fill="currentcolor"><path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/></svg>
+                                Code
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- ######################################### -->
+
+            <div class="section-subtitle">
+                <svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px" fill="currentColor"><path class="text-mark" d="M280-160q-50 0-85-35t-35-85v-80q0-17-11.5-28.5T120-400H80v-160h40q17 0 28.5-11.5T160-600v-80q0-50 35-85t85-35h120v80H280q-17 0-28.5 11.5T240-680v80q0 38-22 69t-58 44v14q36 13 58 44t22 69v80q0 17 11.5 28.5T280-240h120v80H280Z"/><path class="primary-mark" d="M560-160v-80h120q17 0 28.5-11.5T720-280v-80q0-38 22-69t58-44v-14q-36-13-58-44t-22-69v-80q0-17-11.5-28.5T680-720H560v-80h120q50 0 85 35t35 85v80q0 17 11.5 28.5T840-560h40v160h-40q-17 0-28.5 11.5T800-360v80q0 50-35 85t-85 35H560Z"/></svg>
+                <h2 id="stack">Tecnologías</h2>
+            </div>
+
+            <section class="stack">
+                <article class="stack__container">
+                    <h3 class="stack__title largest-subtitle text-mark">Front-End</h3>
+                    <img src="./assets/html5-logo.svg" alt="HTML 5 logo">
+                    <img src="./assets/css3-logo.svg" alt="CSS 3 logo">
+                </article>
+
+                <article class="stack__container">
+                    <h3 class="stack__title largest-subtitle text-mark">Back-End</h3>
+                    <img src="./assets/java-logo2.svg" alt="Java logo">
+                    <img src="./assets/php-logo.svg" alt="PHP logo">
+                </article>
+
+                <article class="stack__container">
+                    <h3 class="stack__title largest-subtitle text-mark">Databases</h3>
+                    <img src="./assets/mysql-logo2.svg" alt="MySQL logo">
+                    <img src="./assets/postgresql-logo.svg" alt="PostgreSQL logo">
+                </article>
+
+                <article class="stack__container">
+                    <h3 class="stack__title largest-subtitle text-mark">Other</h3>
+                    <img src="./assets/git-logo.svg" alt="Git logo">
+                    <img src="./assets/github-logo.svg" alt="GitHub logo">
+                    <img src="./assets/maven-logo.svg" alt="Maven Logo">
+                </article>
+            </section>
+
+            <!-- ######################################### -->
+
+            <div class="section-subtitle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="44px" height="44px" viewBox="0 -960 960 960" fill="currentColor"><path class="text-mark" d="M480-240Zm-320 80v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q37 0 73 4.5t72 14.5l-67 68q-20-3-39-5t-39-2q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32h240v80H160Zm320-320q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Z"/><path class="primary-mark" d="M560-120v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T903-340L683-120H560Zm60-60h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Zm39-62-37-37 37 37Z"/></svg>
+                <h2 id="about-me">Sobre mí</h2>
+            </div>
+
+            <section class="aboutme__information">
+                <p>Hola a todos!, mi nombre es <span class="primary-mark">Joel Espinós Ruiz</span>, alumno del segundo curso de DAW en camino de ser un desarrollador web. Empecé estudiando <span class="primary-mark">Sistemas Microinformáticos</span> interesado para conocer como funciona un equipo informático, con el tiempo me empecé a interesar en el mundo del Software y el desarrollo web.</p>
+                <p>Soy un apasionado en el mundo de la informática tanto en el ámbito del <span class="primary-mark">Software</span> como el <span class="primary-mark">Hardware</span>, siempre me interesa aprender nuevos conocimientos y ponerlos en práctica.</p>
+                <p>Me defino como una persona <span class="primary-mark">trabajadora</span>, <span class="primary-mark">responsable</span> y <span class="primary-mark">detallista</span>, me gusta esforzarme e implicarme,al máximo en los proyectos que realizo para obtener resultados perfectos.</p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy 2025, Hecho con ♥️ y pasión por Joel Espinós Ruiz</p>
+        </footer>
+    </div>
         
-        <div class="social-media">
-            <a href="https://github.com/joelespinos" target="_blank"><img src="./portafoli/img/github_logo.png" alt="Github Logo"></a>
-            <a href="https://www.linkedin.com/in/joelespinosruiz" target="_blank"><img src="./portafoli/img/linkedin_logo.png" alt="Linkedin Logo"></a>
-            <a href="https://www.instagram.com/joel._.espinos/" target="_blank"><img src="./portafoli/img/instagram_logo.png" alt="Instagram Logo"></a>
-        </div>
-    </footer>
 </body>
 </html>
