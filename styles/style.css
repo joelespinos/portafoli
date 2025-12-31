@@ -1,20 +1,4 @@
 :root {
-    --background-color: #ffffff;
-    --light-background-color: #e8e8e8dc;
-    --nav-button: #f4f4f4dc;
-    --outline: #525252;
-    --primary-color: #9B51E0;
-    --darker-primary-color: #8345be;
-    --secondary-color: #657BF9;
-    --text-color: #504F4F;
-    --button-svg-color:#ebebeb;
-    --shadow-color: #d4d4d4;
-    --java-tag-color: #148db1;
-    --mysql-tag-color: #0da5d3;
-    --maven-tag-color: #c83c54;
-}
-
-.darkmode {
     --background-color: #1F2937;
     --light-background-color: #303d4ee1;
     --nav-button: #303d4eb6;
@@ -24,6 +8,29 @@
     --secondary-color: #407CFA;
     --text-color: #ebebeb;
     --shadow-color: #1f1f1f;
+    --button-svg-color:#ebebeb;
+    --java-tag-color: #148db1;
+    --mysql-tag-color: #0da5d3;
+    --maven-tag-color: #c83c54;
+    --html5-tag-color:  #f06529;
+    --css3-tag-color: #264de4;
+    --javascript-tag-color: #f0db4f;
+    --typescript-tag-color: #0070ba;
+    --angular-tag-color: #cc1738;
+    --bootstrap-tag-color: #4a346b;
+    --tailwind-tag-color: #09cbb5;
+}
+
+.darkmode {
+    --background-color: #ffffff;
+    --light-background-color: #e8e8e8dc;
+    --nav-button: #f4f4f4dc;
+    --outline: #525252;
+    --primary-color: #9B51E0;
+    --darker-primary-color: #8345be;
+    --secondary-color: #657BF9;
+    --text-color: #504F4F;
+    --shadow-color: #d4d4d4;
 }
 
 @font-face {
@@ -50,7 +57,6 @@ body {
     max-width: 960px;
     margin: 0 auto;
     box-sizing: border-box;
-    /* outline: 2px solid red;*/ /* <-------- RED OUTLINE */
     padding: 2px;
 }
 
@@ -391,28 +397,44 @@ a {
 
 /* PROJECTS */
 
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
 .project__container {
     display: flex;
     align-items: center;
     gap: 2rem;
     color: var(--text-color);
-    margin-bottom: 3.5rem;
 }
 
 .project__image {
-    max-width: 43%;
+    max-width: 45%;
+    height: 270px;
     border-radius: 15px;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .project__image img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     transform: scale(1.05);
     transition: transform .5s;
 }
 
 .project__image img:hover {
     transform: scale(1.10);
+}
+
+.project__buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 1rem;
 }
 
 .largest-subtitle {
@@ -422,6 +444,7 @@ a {
 
 .languages-list {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     gap: 1rem;
@@ -468,6 +491,62 @@ a {
     background-image: url("../assets/maven-logo.svg");
 }
 
+.html--tag {
+    background-color: var(--html5-tag-color);
+}
+
+.html--tag::before {
+    background-image: url("../assets/html5-logo.svg");
+}
+
+.css--tag {
+    background-color: var(--css3-tag-color);
+}
+
+.css--tag::before {
+    background-image: url("../assets/css3-logo.svg");
+}
+
+.javascript--tag {
+    background-color: var(--javascript-tag-color);
+}
+
+.javascript--tag::before {
+    background-image: url("../assets/javascript-logo.svg");
+}
+
+.typescript--tag {
+    background-color: var(--typescript-tag-color);
+}
+
+.typescript--tag::before {
+    background-image: url("../assets/typescript-logo.svg");
+}
+
+.bootstrap--tag {
+    background-color: var(--bootstrap-tag-color);
+}
+
+.bootstrap--tag::before {
+    background-image: url("../assets/bootstrap-logo.svg");
+}
+
+.tailwind--tag {
+    background-color: var(--tailwind-tag-color);
+}
+
+.tailwind--tag::before {
+    background-image: url("../assets/tailwind-logo.svg");
+}
+
+.angular--tag {
+    background-color: var(--angular-tag-color);
+}
+
+.angular--tag::before {
+    background-image: url("../assets/angular-logo.svg");
+}
+
 @media (max-width:800px) {
     .project__container {
         flex-direction: column;
@@ -476,6 +555,7 @@ a {
 
     .project__image {
         min-width: 90%;
+        margin-bottom: 1rem;
     }   
 }
 
@@ -532,7 +612,7 @@ a {
 @media (max-width: 800px) {
     .stack {
         grid-template-columns: 1fr;
-        row-gap: 2.5rem;
+        row-gap: 3rem;
     }
 }
 
